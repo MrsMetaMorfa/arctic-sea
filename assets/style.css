@@ -1,6 +1,7 @@
 *, *:before, *:after {
 	box-sizing: border-box;
 	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -1190,7 +1191,7 @@ button {
 
 /* width */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar:hover {
@@ -1205,17 +1206,19 @@ button {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #C4C4C4; 
+    background: #C4C4C4;
+    width: 8px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #aaa; 
+    background: #aaa;
+    width: 14px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: transparent; 
+    background: #eee; 
     padding: 0 2px;
 }
 
