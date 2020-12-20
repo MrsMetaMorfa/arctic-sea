@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/fonts/stylesheet.css">
 	<link rel="stylesheet" type="text/css" href="assets/scripts/glider.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
 	<link rel="stylesheet" type="text/css" href="assets/style.css">
 </head>
 <body>
@@ -122,76 +123,80 @@
 
 	<!-- Popups -->
 	<form class="popup contact" id="contact">
-		<div class="popup_inner">
-			<button class="popup_back" type="button">
-				<img src="assets/images/arrow-back.svg" alt="Назад">
-				<span>Назад</span>
-			</button>
-			<h2 class="popup_title">Связь с берегом</h2>
-			<p class="popup_subtitle">Мы придем на помощь в ближайшее время</p>
-			<div class="popup_form">
-				<label class="popup_input">
-					<input type="text" name="contactName" id="contactName" placeholder="Имя фамилия">
-				</label>
-				<label class="popup_input">
-					<input type="tel" name="contactPhone" id="contactPhone" placeholder="+7 (___) ___ - __ - __">
-				</label>
-				<label class="popup_input">
-					<input type="email" name="contactEmail" id="contactEmail" placeholder="e-mail">
-				</label>
+		<div class="wrapper">
+			<div class="popup_inner">
+				<button class="popup_back" type="button">
+					<img src="assets/images/arrow-back.svg" alt="Назад">
+					<span>Назад</span>
+				</button>
+				<h2 class="popup_title">Связь с берегом</h2>
+				<p class="popup_subtitle">Мы придем на помощь в ближайшее время</p>
+				<div class="popup_form">
+					<label class="popup_input">
+						<input type="text" name="contactName" id="contactName" placeholder="Имя фамилия">
+					</label>
+					<label class="popup_input">
+						<input type="tel" name="contactPhone" id="contactPhone" placeholder="+7 (___) ___ - __ - __">
+					</label>
+					<label class="popup_input">
+						<input type="email" name="contactEmail" id="contactEmail" placeholder="e-mail">
+					</label>
+				</div>
+				<div class="popup_checkbox">
+					<input class="visually-hidden" type="checkbox" name="confirm" id="contactConfirm">
+					<label for="contactConfirm">Даю согласие на обработку персональных данных и соглашаюсь с условиями и политикой конфиденциальности</label>
+				</div>
+				<button class="popup_confirm" type="confirm">Отправить сигнал</button>
 			</div>
-			<div class="popup_checkbox">
-				<input class="visually-hidden" type="checkbox" name="confirm" id="contactConfirm">
-				<label for="contactConfirm">Даю согласие на обработку персональных данных и соглашаюсь с условиями и политикой конфиденциальности</label>
-			</div>
-			<button class="popup_confirm" type="confirm">Отправить сигнал</button>
 		</div>
 	</form>
 
 	<form class="popup product-card" id="product">
-		<div class="popup_inner">
-			<div class="product_image">
-				<img src="assets/images/full.jpg" alt="Краб">
-			</div>
-			<div class="product_content">
-				<div class="product_title">
-					<h2 class="title">Краб</h2>
-					<p class="price">1500 <span>р./кг</span></p>
+		<div class="wrapper">
+			<div class="popup_inner">
+				<div class="product_image">
+					<img src="assets/images/full.jpg" alt="Краб">
 				</div>
-				<p class="product_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-				<div class="product_parameters">
-					<p class="parameter">
-						<span class="parameter_option">Вес особи</span>
-						<span class="parameter_value">1,5 - 2,5 - 3 кг</span>
-					</p>
-					<p class="parameter">
-						<span class="parameter_option">Пищевая ценность продукта в 100 гр:</span>
-						<span class="parameter_value">Белки - 19.5 г; Жиры - 18.2 г</span>
-					</p>
-					<p class="parameter">
-						<span class="parameter_option">Энергетическая ценность продукта:</span>
-						<span class="parameter_value">82 кКал</span>
-					</p>
-					<p class="parameter">
-						<span class="parameter_option">Рекомендуемая температура хранения:	</span>
-						<span class="parameter_value">— 18</span>
-					</p>
-					<p class="parameter">
-						<span class="parameter_option">Регион добычи</span>
-						<span class="parameter_value">Мурманск</span>
-					</p>
-					<p class="parameter">
-						<span class="parameter_option">Термобокс вместимость</span>
-						<span class="parameter_value">4-5 шт</span>
-					</p>
-				</div>
-				<div class="product_total">
-					<div class="product_amount">
-						<button class="amount_button amount--less" type="button">-</button>
-						<span class="amount">1</span>
-						<button class="amount_button amount--more" type="button">+</button>
+				<div class="product_content">
+					<div class="product_title">
+						<h2 class="title">Краб</h2>
+						<p class="price">1500 <span>р./кг</span></p>
 					</div>
-					<button class="popup_confirm" type="confirm">Хочу</button>			
+					<p class="product_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					<div class="product_parameters">
+						<p class="parameter">
+							<span class="parameter_option">Вес особи</span>
+							<span class="parameter_value">1,5 - 2,5 - 3 кг</span>
+						</p>
+						<p class="parameter">
+							<span class="parameter_option">Пищевая ценность продукта в 100 гр:</span>
+							<span class="parameter_value">Белки - 19.5 г; Жиры - 18.2 г</span>
+						</p>
+						<p class="parameter">
+							<span class="parameter_option">Энергетическая ценность продукта:</span>
+							<span class="parameter_value">82 кКал</span>
+						</p>
+						<p class="parameter">
+							<span class="parameter_option">Рекомендуемая температура хранения:	</span>
+							<span class="parameter_value">— 18</span>
+						</p>
+						<p class="parameter">
+							<span class="parameter_option">Регион добычи</span>
+							<span class="parameter_value">Мурманск</span>
+						</p>
+						<p class="parameter">
+							<span class="parameter_option">Термобокс вместимость</span>
+							<span class="parameter_value">4-5 шт</span>
+						</p>
+					</div>
+					<div class="product_total">
+						<div class="product_amount">
+							<button class="amount_button amount--less" type="button">-</button>
+							<span class="amount">1</span>
+							<button class="amount_button amount--more" type="button">+</button>
+						</div>
+						<button class="popup_confirm" type="confirm">Хочу</button>			
+					</div>
 				</div>
 			</div>
 		</div>
@@ -300,8 +305,8 @@
 					</div>
 				</div>
 				<div class="popup_checkbox">
-					<input class="visually-hidden" type="checkbox" name="confirm" id="contactConfirm">
-					<label for="contactConfirm">Даю согласие на обработку персональных данных и соглашаюсь с условиями и политикой конфиденциальности</label>
+					<input class="visually-hidden" type="checkbox" name="confirm" id="basketConfirm">
+					<label for="basketConfirm">Даю согласие на обработку персональных данных и соглашаюсь с условиями и политикой конфиденциальности</label>
 				</div>
 				<button class="popup_confirm" type="confirm">Отправить сигнал</button>
 			</form>
@@ -309,6 +314,7 @@
 	</div>
 
 	<script src="assets/scripts/glider.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 	<!-- <script src="assets/scripts/script.js"></script> -->
 	<!-- Move following script to script.js -->
 	<script type="text/javascript">

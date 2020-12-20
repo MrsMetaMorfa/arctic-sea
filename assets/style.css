@@ -1,5 +1,6 @@
 *, *:before, *:after {
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -378,12 +379,12 @@ button {
 }
 .popup_inner {
 	background: #FFFFFF;
-	box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
 	display: flex;
 	flex-direction: column;
 	padding: 44px 48px 48px;
-	overflow-y: auto;
 	min-width: 560px;
+	min-height: 100vh;
+	overflow-y: auto;
 }
 .popup_back {
 	display: flex;
@@ -593,13 +594,18 @@ button {
 	transform: translateY(0);
 }
 .product-card .popup_inner {
-	max-width: 720px;
-	width: 60%;
-	height: 100%;
-	max-height: calc(100vh - 40px);
 	margin: auto; 
 	padding: 24px;
-	overflow-y: auto;
+	width: 100%;
+	height: 100%;
+	min-height: calc(100vh - 40px);
+}
+.product-card .wrapper {
+	max-width: 720px;
+	width: 60%;
+	margin: auto; 
+	height: 100%;
+	max-height: calc(100vh - 40px);
 }
 .product-card .product_image {
 	height: 33vh;
@@ -723,15 +729,17 @@ button {
 #basket #step1.active, #basket #step2.active {
 	width: 100%;
 }
-#basket .wrapper {
+.popup .wrapper {
 	overflow: hidden;
 	width: auto;
 	height: 100%;
+	max-height: 100%;
 	width: 100%;
 	max-width: 560px;
 	display: flex;
 	position: relative;
 	transition: width 0.3s ease-in-out;
+	box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
 }
 .popup_list .list_item {
 	display: flex;
@@ -1178,4 +1186,50 @@ button {
 	overflow: hidden;
 	padding: 0;
 	margin: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar:hover {
+	width: 16px;
+}
+
+/* button */
+::-webkit-scrollbar-button {
+    background: transparent; 
+    height: 0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #C4C4C4; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #aaa; 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent; 
+    padding: 0 2px;
+}
+
+/* The track NOT covered by the handle.*/
+::-webkit-scrollbar-track-piece {
+    background: transparent; 
+}
+
+/* Corner */
+::-webkit-scrollbar-corner {
+    background: transparent; 
+}
+
+/* Resizer */
+::-webkit-resizer {
+    background: transparent; 
 }
