@@ -424,9 +424,11 @@
 			}
 			contact.onsubmit = (e) => {
 				e.preventDefault();
+				contact.classList.remove('show');
 			}
 			contactConfirm.onclick = (e) => {
 				e.preventDefault();
+				contact.classList.remove('show');
 			}
 
 			let productLinks = document.querySelectorAll('.catalog_link');
@@ -466,6 +468,7 @@
 			basket.onclick = () => {
 				basketPopup.classList.add('show');
 				basketStep1.classList.add('active');
+				basketStep1.style.display = '';
 				basketStep2.style.display = 'none';
 				basketStep2.classList.remove('active');
 				let counters = basketStep1.querySelectorAll('.item_amount');
