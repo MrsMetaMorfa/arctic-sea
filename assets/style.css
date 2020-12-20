@@ -380,12 +380,15 @@ button {
 }
 .popup_inner {
 	background: #FFFFFF;
+	min-width: 560px;
+	min-height: 100vh;
+	overflow-y: hidden;
+}
+.popup_inner .tsb-cont {
+	min-height: 100%;
 	display: flex;
 	flex-direction: column;
 	padding: 44px 48px 48px;
-	min-width: 560px;
-	min-height: 100vh;
-	overflow-y: auto;
 }
 .popup_back {
 	display: flex;
@@ -600,6 +603,9 @@ button {
 	width: 100%;
 	height: 100%;
 	min-height: calc(100vh - 40px);
+}
+.product-card .tsb-cont {
+	padding: 0;
 }
 .product-card .wrapper {
 	max-width: 720px;
@@ -863,6 +869,9 @@ button {
 
 @media screen and (max-width: 1024px) {
 	.popup_inner {
+		padding: 0;
+	}
+	.popup_inner .tsb-cont {
 		padding: 22px 24px 24px;
 	}
 	.popup_title {
@@ -1006,7 +1015,10 @@ button {
 		width: 100%;
 		max-width: 400px;
 		min-width: 320px;
-		padding: 32px 16px;
+		padding: 0;
+	}
+	.popup_inner .tsb-cont {
+		padding-bottom: 32px 16px;
 	}
 	.popup_back {
 		margin-bottom: 32px;
