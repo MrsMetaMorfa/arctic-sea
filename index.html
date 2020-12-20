@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<title>Arctic Sea</title>
+	<link rel="stylesheet" type="text/css" href="assets/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/fonts/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="assets/scripts/glider.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+<body>
+	<div class="sea">
+		<section class="sea_top">
+			<div class="logo">
+				<h1 class="title visually-hidden">Arctic Sea</h1>
+				<img src="assets/images/logo.svg" alt="Arctic Sea">
+			</div>
+			<div class="description">
+				<p class="description_text left">Выберите<br>&nbsp;страну</p>
+				<p class="description_text right">Choose&nbsp;<br>a contry</p>
+			</div>
+
+		</section>
+
+		<section class="sea_bottom">
+			<div class="content">
+				<h2 class="title">Что будем ловить?</h2>
+				<hr>
+				<div class="catalog glider-contain">
+					<div class="glider">
+						<div class="catalog_item">
+							<button class="catalog_link" data-target-id="product">
+								<span class="link_image">
+									<img src="assets/images/1-crab.svg" alt="Краб">
+								</span>
+								<span class="link_title">Краб</span>
+							</button>
+							<button class="catalog_link" data-target-id="product">
+								<span class="link_image">
+									<img src="assets/images/2-crab-freeze.svg" alt="Краб мороженый">
+								</span>
+								<span class="link_title">Краб мороженый<small>(для друзей)</small></span>
+							</button>
+
+						</div>
+						<!-- Карточка товара открывается через data-target-id, могут открываться отдельные окна для каждого товара, и тогда id приобретает постфикс типа product_1, product_2 и т.д. Либо id остаётся одним, как и карточка, а подгружаются только данные -->
+						<div class="catalog_item">
+							<button class="catalog_link" data-target-id="product">
+								<span class="link_image">
+									<img src="assets/images/3-shark.svg" alt="Рыбка">
+								</span>
+								<span class="link_title">Рыбка</span>
+							</button>
+							<button class="catalog_link" data-target-id="product">
+								<span class="link_image">
+									<img src="assets/images/4-sea-urchin.svg" alt="Морские ежи">
+								</span>
+								<span class="link_title">Морские ежи</span>
+							</button>
+						</div>
+						<div class="catalog_item">
+							<button class="catalog_link" data-target-id="product">
+								<span class="link_image">
+									<img src="assets/images/5-shrimp.svg" alt="Креветки">
+								</span>
+								<span class="link_title">Креветки</span>
+							</button>
+							<button class="catalog_link" data-target-id="product">
+								<span class="link_image">
+									<img src="assets/images/6-seaweed.svg" alt="Морская капуста">
+								</span>
+								<span class="link_title">Морская капуста</span>
+							</button>
+						</div>
+						<div class="catalog_item">
+							<button class="catalog_link" data-target-id="product">
+								<span class="link_image">
+									<img src="assets/images/7-dessert.svg" alt="Десерты">
+								</span>
+								<span class="link_title">Десерты</span>
+							</button>
+							<button class="catalog_link" data-target-id="product">
+								<span class="link_image">
+									<img src="assets/images/8-raindeer.svg" alt="Оленина">
+								</span>
+								<span class="link_title">Оленина</span>
+							</button>
+						</div>
+					</div>
+
+					<div class="catalog_arrows">
+						<button class="catalog_arrow catalog_arrow--prev glider-prev" aria-label="Previous">
+							<img src="assets/images/arrow-right.svg" alt="Previous page">
+						</button>
+						<button class="catalog_arrow catalog_arrow--next glider-next" aria-label="Next">
+							<img src="assets/images/arrow-right.svg" alt="Next page">
+						</button>
+					</div>
+				</div>
+				<button class="contact" type="button">связь<br>с берегом</button>
+				<button class="to-top" type="button">
+					<img src="assets/images/arrow-to-top.svg" alt="to the surface">
+					<span>to the surface</span>
+				</button>
+				<button class="basket" type="button">
+					<img src="assets/images/basket.svg" alt="Basket">
+				</button>
+			</div>
+		</section>
+		<button class="submarine left" type="button" title="Русский язык">
+			<span class="submarine_flag"><img src="assets/images/flag-ru.png" alt="Russian flag"></span>
+			<span class="submarine_flagshtock"></span>
+			<span class="submarine_boat"><img src="assets/images/submarine_1.png" alt="Submarine"></span>
+		</button>
+		<button class="submarine right" type="button" title="English">
+			<span class="submarine_flag"><img src="assets/images/flag-uk.png" alt="Flag UK"></span>
+			<span class="submarine_flagshtock"></span>
+			<span class="submarine_boat"><img src="assets/images/submarine_2.png" alt="Submarine"></span>
+		</button>
+	</div>
+
+	<!-- Popups -->
+	<form class="popup contact" id="contact">
+		<div class="popup_inner">
+			<button class="popup_back" type="button">
+				<img src="assets/images/arrow-back.svg" alt="Назад">
+				<span>Назад</span>
+			</button>
+			<h2 class="popup_title">Связь с берегом</h2>
+			<p class="popup_subtitle">Мы придем на помощь в ближайшее время</p>
+			<div class="popup_form">
+				<label class="popup_input">
+					<input type="text" name="contactName" id="contactName" placeholder="Имя фамилия">
+				</label>
+				<label class="popup_input">
+					<input type="tel" name="contactPhone" id="contactPhone" placeholder="+7 (___) ___ - __ - __">
+				</label>
+				<label class="popup_input">
+					<input type="email" name="contactEmail" id="contactEmail" placeholder="e-mail">
+				</label>
+			</div>
+			<div class="popup_checkbox">
+				<input class="visually-hidden" type="checkbox" name="confirm" id="contactConfirm">
+				<label for="contactConfirm">Даю согласие на обработку персональных данных и соглашаюсь с условиями и политикой конфиденциальности</label>
+			</div>
+			<button class="popup_confirm" type="confirm">Отправить сигнал</button>
+		</div>
+	</form>
+
+	<form class="popup product-card" id="product">
+		<div class="popup_inner">
+			<div class="product_image">
+				<img src="assets/images/full.jpg" alt="Краб">
+			</div>
+			<div class="product_content">
+				<div class="product_title">
+					<h2 class="title">Краб</h2>
+					<p class="price">1500 <span>р./кг</span></p>
+				</div>
+				<p class="product_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+				<div class="product_parameters">
+					<p class="parameter">
+						<span class="parameter_option">Вес особи</span>
+						<span class="parameter_value">1,5 - 2,5 - 3 кг</span>
+					</p>
+					<p class="parameter">
+						<span class="parameter_option">Пищевая ценность продукта в 100 гр:</span>
+						<span class="parameter_value">Белки - 19.5 г; Жиры - 18.2 г</span>
+					</p>
+					<p class="parameter">
+						<span class="parameter_option">Энергетическая ценность продукта:</span>
+						<span class="parameter_value">82 кКал</span>
+					</p>
+					<p class="parameter">
+						<span class="parameter_option">Рекомендуемая температура хранения:	</span>
+						<span class="parameter_value">— 18</span>
+					</p>
+					<p class="parameter">
+						<span class="parameter_option">Регион добычи</span>
+						<span class="parameter_value">Мурманск</span>
+					</p>
+					<p class="parameter">
+						<span class="parameter_option">Термобокс вместимость</span>
+						<span class="parameter_value">4-5 шт</span>
+					</p>
+				</div>
+				<div class="product_total">
+					<div class="product_amount">
+						<button class="amount_button amount--less" type="button">-</button>
+						<span class="amount">1</span>
+						<button class="amount_button amount--more" type="button">+</button>
+					</div>
+					<button class="popup_confirm" type="confirm">Хочу</button>			
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<div class="popup basket" id="basket">
+		<div class="wrapper">
+			<form class="popup_inner" id="step1">
+				<button class="popup_back" type="button">
+					<img src="assets/images/arrow-back.svg" alt="Назад">
+					<span>Назад</span>
+				</button>
+				<h2 class="popup_title">Ваш улов</h2>
+				<p class="popup_subtitle">Всего несколько шагов и ваш заказ будет оформлен</p>
+				<ul class="popup_list">
+					<li class="list_item">
+						<div class="item_image"><img src="assets/images/preview.jpg"></div>
+						<div class="item_content">
+							<div class="item_description">
+								<h3 class="item_title">Краб</h3>
+								<p class="item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+							</div>
+							<div class="item_total">
+								<p class="item_price">1500 р./кг</p>
+								<div class="item_amount">
+									<button class="amount_button amount--less" type="button">-</button>
+									<span class="amount">1</span>
+									<button class="amount_button amount--more" type="button">+</button>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="list_item">
+						<div class="item_image"><img src="assets/images/preview.jpg"></div>
+						<div class="item_content">
+							<div class="item_description">
+								<h3 class="item_title">Краб</h3>
+								<p class="item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+							</div>
+							<div class="item_total">
+								<p class="item_price">1500 р./кг</p>
+								<div class="item_amount">
+									<button class="amount_button amount--less" type="button">-</button>
+									<span class="amount">1</span>
+									<button class="amount_button amount--more" type="button">+</button>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="list_item">
+						<div class="item_image"><img src="assets/images/preview.jpg"></div>
+						<div class="item_content">
+							<div class="item_description">
+								<h3 class="item_title">Краб</h3>
+								<p class="item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+							</div>
+							<div class="item_total">
+								<p class="item_price">1500 р./кг</p>
+								<div class="item_amount">
+									<button class="amount_button amount--less" type="button">-</button>
+									<span class="amount">1</span>
+									<button class="amount_button amount--more" type="button">+</button>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<button class="popup_confirm" type="confirm">Оформить заказ</button>
+			</form>
+			<form class="popup_inner" id="step2">
+				<button class="popup_back to-prev-step" type="button">
+					<img src="assets/images/arrow-back.svg" alt="Назад">
+					<span>Назад</span>
+				</button>
+				<h2 class="popup_title">Связь с берегом</h2>
+				<p class="popup_subtitle">Расскажите нам, что случилось, мы свяжемся с вами в ближайшее время и обязательно вас спасем!</p>
+				<div class="popup_form">
+					<label class="popup_input">
+						<input type="text" name="basketName" id="basketName" placeholder="Имя фамилия">
+					</label>
+					<label class="popup_input">
+						<input type="tel" name="basketPhone" id="basketPhone" placeholder="+7 (___) ___ - __ - __">
+					</label>
+					<label class="popup_input">
+						<input type="text" name="basketAddress" id="basketAddress" placeholder="Адрес доставки">
+					</label>
+					<label class="popup_input">
+						<input type="text" name="basketDeliveryTime" id="basketDeliveryTime" placeholder="Когда привезти">
+					</label>
+					<div class="popup_input-group">
+						<div class="popup_radio">
+							<input class="visually-hidden" type="radio" name="payment" id="paymentOnline" value="Онлайн-оплата">
+							<label for="paymentOnline">Онлайн-оплата</label>
+						</div>
+						<div class="popup_radio">
+							<input class="visually-hidden" type="radio" name="payment" id="paymentOffline" value="Оплата при получении">
+							<label for="paymentOffline">Оплата при получении</label>
+						</div>
+					</div>
+					<label class="popup_input">
+						<input type="text" name="basketCoupon" id="basketCoupon" placeholder="Купон на скидку">
+					</label>
+					<div class="popup_total-sum">
+						<p class="total_title">Итого:</p>
+						<p class="total_sum">1500р.</p>
+					</div>
+				</div>
+				<div class="popup_checkbox">
+					<input class="visually-hidden" type="checkbox" name="confirm" id="contactConfirm">
+					<label for="contactConfirm">Даю согласие на обработку персональных данных и соглашаюсь с условиями и политикой конфиденциальности</label>
+				</div>
+				<button class="popup_confirm" type="confirm">Отправить сигнал</button>
+			</form>
+		</div>
+	</div>
+
+	<script src="assets/scripts/glider.min.js"></script>
+	<!-- <script src="assets/scripts/script.js"></script> -->
+	<!-- Move following script to script.js -->
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			console.log("document is ready. Let's the party started!" );
+
+			let sea = document.querySelector('.sea');
+			let submarines = document.querySelectorAll('.submarine');
+			let content = document.querySelector('.content');
+			submarines.forEach((submarine) => {
+			   	submarine.onclick = () => {
+			   		if (submarine.classList.contains('right')) {
+			   			sea.classList.add('right');
+			   			document.querySelector('#contact').classList.add('right');
+			   			document.querySelector('#basket').classList.add('right');
+			   		} else {
+			   			sea.classList.remove('right');
+			   			document.querySelector('#contact').classList.remove('right');
+			   			document.querySelector('#basket').classList.remove('right');
+			   		}
+			   		submarine.classList.add('active');
+			   		setTimeout(() => {
+			   			sea.classList.add('down');
+				   		submarine.classList.add('on-bottom');
+			   		}, 900);
+			   		setTimeout(() => {
+						content.classList.add('show');
+						content.style.opacity = 1;
+			   		}, 1000);
+			   	}
+			})
+
+			let toTop = document.querySelector('.to-top');
+			toTop.onclick = () => {
+				let activeSubmarine = document.querySelector('.submarine.on-bottom');
+				activeSubmarine.classList.remove('active');
+				sea.classList.remove('down');
+				content.classList.remove('show');
+				content.style.opacity = 0;
+				setTimeout(() => {
+					activeSubmarine.classList.remove('on-bottom');
+					if (sea.classList.contains('right')) {
+						sea.classList.remove('right');
+					}
+				}, 900);
+			}
+
+			let glider = new Glider(document.querySelector('.glider'), {
+				//fixedWidth: '240px',
+				slidesToShow: 2,
+				slidesToScroll: 2,
+				draggable: true,
+				pagination: false,
+				responsive: [
+					{
+						breakpoint: 767,
+						settings: {
+				   			slidesToShow: 2,
+				   			slidesToScroll: 2
+						}
+					},
+					{
+						breakpoint: 500,
+						settings: {
+				   			slidesToShow: 1,
+				   			slidesToScroll: 1
+						}
+					},
+					{
+						breakpoint: 320,
+						settings: {
+				   			slidesToShow: 2,
+				   			slidesToScroll: 2
+						}
+					}
+				],
+				arrows: {
+					prev: '.catalog_arrow--prev',
+					next: '.catalog_arrow--next'
+				}
+			} );
+
+			// Popups
+			let popups = document.querySelectorAll('.popup');
+			popups.forEach((popup) => {
+				let closeButton = popup.querySelector('.popup_back');
+				if (closeButton) {
+					if (!closeButton.classList.contains('to-prev-step')) {
+						closeButton.onclick = () => {
+							popup.classList.remove('show');
+						}
+					}
+				}
+				popup.onclick = () => {
+					popup.classList.remove('show');
+				}
+				let inners = popup.querySelectorAll('.popup_inner');
+				if (inners) {
+					inners.forEach((inner) => {
+						inner.onclick = (e) => {
+							e.stopPropagation();
+						}
+					})
+				}
+			});
+
+			let contact = document.querySelector('#contact');
+			let contactOpener = document.querySelector('.sea .contact');
+			let contactConfirm = contact.querySelector('.popup_confirm');
+			
+			contactOpener.onclick = () => {
+				contact.classList.add('show');
+			}
+			contact.onsubmit = (e) => {
+				e.preventDefault();
+			}
+			contactConfirm.onclick = (e) => {
+				e.preventDefault();
+			}
+
+			let productLinks = document.querySelectorAll('.catalog_link');
+			productLinks.forEach((link) => {
+				let target = link.getAttribute('data-target-id');
+				let popup = document.getElementById(target);
+				link.onclick = () => {
+					popup.classList.add('show');
+				}
+			});
+
+			let productAmounts = document.querySelectorAll('.product_amount');
+			productAmounts.forEach((amount) => {
+				let amountLess = amount.querySelector('.amount--less');
+				let amountTotal = amount.querySelector('.amount');
+				let amountMore = amount.querySelector('.amount--more');
+				let value = +amountTotal.innerText;
+				amountLess.onclick = () => {
+					if (value > 1) {
+						value = value - 1;
+					}
+					amountTotal.innerText = value;
+				}
+				amountMore.onclick = () => {
+					value = value + 1;
+					amountTotal.innerText = value;
+				}
+			});
+
+			let basket = document.querySelector('.basket');
+			let basketPopup = document.querySelector('#basket');
+			let basketStep1 = basketPopup.querySelector('#step1');
+			let basketStep2 = basketPopup.querySelector('#step2');
+			let basketStep1Confirm = basketStep1.querySelector('.popup_confirm');
+			let basketStep2Confirm = basketStep2.querySelector('.popup_confirm');
+			let basketWrapper = basketPopup.querySelector('.wrapper');
+			basket.onclick = () => {
+				basketPopup.classList.add('show');
+				basketStep1.classList.add('active');
+				basketStep2.style.display = 'none';
+				basketStep2.classList.remove('active');
+				let counters = basketStep1.querySelectorAll('.item_amount');
+				counters.forEach((counter) => {
+					let amountLess = counter.querySelector('.amount--less');
+					let amountTotal = counter.querySelector('.amount');
+					let amountMore = counter.querySelector('.amount--more');
+					let value = +amountTotal.innerText;
+					amountLess.onclick = () => {
+						if (value > 1) {
+							value = value - 1;
+						} else {
+							value = 0;
+							let i = counter;
+							while (!i.classList.contains('list_item')) {
+								i = i.parentNode;
+							}
+							i.parentNode.removeChild(i);
+						}
+						amountTotal.innerText = value;
+					}
+					amountMore.onclick = () => {
+						value = value + 1;
+						amountTotal.innerText = value;
+					}
+				});
+			}
+			basketStep1Confirm.onclick = (e) => {
+				e.preventDefault();
+				basketStep1.classList.remove('active');
+				basketWrapper.style.width = '0';
+				setTimeout(() => {
+					basketStep1.style.display = 'none';
+					basketStep2.style.display = '';
+					basketStep2.classList.add('active');
+					basketWrapper.style.width = '';
+				}, 300);
+			}
+			basketStep2Confirm.onclick = (e) => {
+				e.preventDefault();
+				basketStep2.style.display = 'none';
+				basketStep2.classList.remove('active');
+				basketPopup.classList.remove('show');
+			}
+			let basketBack = basketStep2.querySelector('.popup_back');
+			basketBack.onclick = (e) => {
+				e.preventDefault();
+				basketStep2.classList.remove('active');
+				basketWrapper.style.width = '0';
+				setTimeout(() => {
+					basketStep2.style.display = 'none';
+					basketStep1.style.display = '';
+					basketWrapper.style.width = '';
+					basketPopup.classList.add('show');
+					basketStep1.classList.add('active');
+				}, 300);
+			}
+
+
+			let productCards = document.querySelectorAll('.product-card');
+			productCards.forEach((card) => {
+				card.onsubmit = (e) => {
+					e.preventDefault();
+					if (!basket.classList.contains('active')) {
+						basket.classList.add('active');
+					}
+					let card = document.querySelector('.popup.show');
+					card.classList.remove('show');
+				}
+			});
+
+		});
+	</script>
+</body>
+</html>
