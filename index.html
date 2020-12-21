@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/fonts/stylesheet.css">
 	<link rel="stylesheet" type="text/css" href="assets/scripts/glider.min.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@lugindev/truescrollbar/src/TrueScrollBar.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@lugindev/truescrollbar/src/TrueScrollBar.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="assets/style.css">
 </head>
 <body>
@@ -123,7 +123,7 @@
 
 	<!-- Popups -->
 	<form class="popup contact" id="contact">
-		<div class="wrapper" data-simplebar>
+		<div class="wrapper">
 			<div class="popup_inner">
 				<button class="popup_back" type="button">
 					<img src="assets/images/arrow-back.svg" alt="Назад">
@@ -152,7 +152,7 @@
 	</form>
 
 	<form class="popup product-card" id="product">
-		<div class="wrapper" data-simplebar>
+		<div class="wrapper">
 			<div class="popup_inner">
 				<div class="product_image">
 					<img src="assets/images/full.jpg" alt="Краб">
@@ -203,7 +203,7 @@
 	</form>
 
 	<div class="popup basket" id="basket">
-		<div class="wrapper" data-simplebar>
+		<div class="wrapper">
 			<form class="popup_inner" id="step1">
 				<button class="popup_back" type="button">
 					<img src="assets/images/arrow-back.svg" alt="Назад">
@@ -314,7 +314,7 @@
 	</div>
 
 	<script src="assets/scripts/glider.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@lugindev/truescrollbar/src/TrueScrollBar.min.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/@lugindev/truescrollbar/src/TrueScrollBar.min.js"></script> -->
 	<!-- <script src="assets/scripts/script.js"></script> -->
 	<!-- Move following script to script.js -->
 	<script type="text/javascript">
@@ -414,7 +414,7 @@
 				let inners = popup.querySelectorAll('.popup_inner');
 				if (inners) {
 					inners.forEach((inner) => {
-						new TrueScrollBar(inner)
+						// new TrueScrollBar(inner)
 						inner.onclick = (e) => {
 							e.stopPropagation();
 						}
