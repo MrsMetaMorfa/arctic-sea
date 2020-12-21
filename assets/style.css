@@ -377,6 +377,8 @@ button {
 	position: fixed;
 	overflow: hidden;
 	z-index: 2000;
+top: 0;
+bottom: 0;
 }
 .popup_inner {
 	background: #FFFFFF;
