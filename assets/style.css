@@ -381,14 +381,14 @@ button {
 .popup_inner {
 	background: #FFFFFF;
 	min-width: 560px;
-	min-height: 100vh;
+	min-height: 100%;
 	overflow-y: auto;
+        padding: 44px 48px 48px;
+	display: flex;
+	flex-direction: column;
 }
 .popup_inner .tsb-cont {
 	min-height: 100%;
-	display: flex;
-	flex-direction: column;
-	padding: 44px 48px 48px;
 }
 .popup_back {
 	display: flex;
@@ -869,14 +869,11 @@ button {
 
 @media screen and (max-width: 1024px) {
 	.popup_inner {
-		padding: 0;
-	}
-	.popup_inner .tsb-cont {
-		padding: 22px 24px 24px;
+            padding: 22px 24px 24px;
 	}
 	.popup_title {
 	    font-size: 32px;
-    	line-height: 48px;
+    	    line-height: 48px;
 	}
 	.product-card .product_content {
 	    padding: 16px 0;
@@ -1015,9 +1012,6 @@ button {
 		width: 100%;
 		max-width: 400px;
 		min-width: 320px;
-		padding: 0;
-	}
-	.popup_inner .tsb-cont {
 		padding-bottom: 32px 16px;
 	}
 	.popup_back {
@@ -1039,7 +1033,6 @@ button {
 	.product-card .popup_inner {
 		width: 100%;
 		max-width: 520px;
-		padding: 0;
 		height: auto;
 	}
 	.product-card .product_image {
