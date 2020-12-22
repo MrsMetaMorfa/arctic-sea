@@ -890,7 +890,7 @@ bottom: 0;
 	}
 	.sea_bottom .catalog {
 		padding-top: 0;
-		height: 100%;
+		height: auto;
 	}
 	.description {
 		width: 100%;
@@ -940,16 +940,16 @@ bottom: 0;
 		top: -9.9vh;
 	}
 	.submarine.active{
-		top: calc(200vh - 9.5vh);
+		top: calc(200vh - 11.5vh);
 
 	}
 	.submarine.left.active {
-		left: -0.36vh;
-		transform: scale(1.475) rotate(-4.9deg);
+		left: .36vh;
+		transform: scale(1.2) rotate(-4.9deg);
 	}
 	.submarine.right.active {
-		right: -0.36vh;
-		transform: scale(1.475) rotate(4.9deg);
+		right: .36vh;
+		transform: scale(1.2) rotate(4.9deg);
 	}
 	.sea_bottom .contact {
 		left: 50%;
@@ -962,15 +962,20 @@ bottom: 0;
 		font-size: 12px;
 	}
 	.sea_bottom .to-top {
-		display: none;
+		bottom: 3.2vh;
+		right: 3.2vh;
+	}
+	.sea.right .sea_bottom .to-top {
+		right: auto;
+		left: 3.2vh;
 	}
 	.content {
-		padding-top: 18.4vh;
+		padding-top: 16.4vh;
 		padding-bottom: 24.6vh;
 	}
 	.sea.down .logo {
 		margin-top: 6vh;
-		height: 7.65vh;
+		height: 6.65vh;
 		padding-left: 6.3vh;
 		width: 100%;
 	}
@@ -980,6 +985,7 @@ bottom: 0;
 		font-size: 2.4vh;
 		line-height: 3vh;
 		letter-spacing: 0.04em;
+		margin-bottom: auto;
 		width: 100%;
 		text-transform: none;
 	}
