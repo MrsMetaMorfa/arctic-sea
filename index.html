@@ -397,6 +397,22 @@
 				}
 			} );
 
+			let catalog = document.querySelector('.catalog');
+			let prevSlide = document.querySelector('.catalog_arrow--prev');
+			let nextSlide = document.querySelector('.catalog_arrow--next');
+			let autoslide = setInterval(() => {
+				nextSlide.classList.contains('disabled') ? glider.scrollItem(0) : nextSlide.click()
+			}, 5000);
+
+			catalog.onmouseenter = () => { 
+				clearInterval(autoslide);
+			 }
+			catalog.onmouseleave = () => {
+				autoslide = setInterval(() => {
+					nextSlide.classList.contains('disabled') ? glider.scrollItem(0) : nextSlide.click()
+				}, 5000)
+			}
+
 			// Popups
 			let popups = document.querySelectorAll('.popup');
 			popups.forEach((popup) => {

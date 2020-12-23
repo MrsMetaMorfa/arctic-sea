@@ -238,8 +238,8 @@ button {
 	border: none;
 }
 .sea_bottom .catalog {
-	max-width: 85%;
-	width: 108.8vh;
+	width: 85vw;
+	max-width: 1088px;
 	margin: 0 auto; 
 	height: calc(100% - 3vh - 6.4vh - .4vh);
 	display: flex;
@@ -251,6 +251,7 @@ button {
 	padding: 1.6vh;
 	display: flex;
 	min-height: 32vh;
+	width: 42.5vw!important;
 }
 .sea_bottom .catalog_link {
 	display: flex;
@@ -619,6 +620,7 @@ bottom: 0;
 .product-card .product_image {
 	height: 33vh;
 	width: 100%;
+	background: lightgray;
 }
 .product-card .product_image img {
 	width: 100%;
@@ -760,6 +762,8 @@ bottom: 0;
 	height: 72px;
 	border-radius: 4px;
 	margin-right: 24px;
+	overflow: hidden;
+	background: lightgray;
 }
 .popup_list .item_image img {
 	width: 100%;
@@ -880,13 +884,27 @@ bottom: 0;
 	    padding: 16px 0;
 	}
 }
+
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+	.sea_bottom .catalog {
+		width: 60vw;
+		min-width: 300px;
+	}
+	.sea_bottom .catalog_item {
+		width: 60vw!important;
+		min-width: 300px;
+	}
+}
+
 @media screen and (orientation: portrait) {
 	.logo {
 		height: 11.5vh;
 		margin-top: 12vh;
+		max-width: 90%;
 	}
 	.sea_bottom .catalog_item {
 		flex-direction: column;
+		width: 50vw!important;
 	}
 	.sea_bottom .catalog {
 		padding-top: 0;
@@ -915,10 +933,12 @@ bottom: 0;
 		top: calc(100vh - 17vh - 8vh);
 	}
 	.submarine.left {
-		left: calc(4.55vh + 10.125vh);
+	    left: calc(50% - 2vh);
+    	transform: translateX(-100%);
 	}
 	.submarine.right {
-		right: calc(4.55vh + 10.125vh);
+	    right: calc(50% - 2vh);
+	    transform: translateX(100%);
 	}
 	.submarine_flagshtock {
 		left: 10.125vh;
@@ -976,7 +996,7 @@ bottom: 0;
 	.sea.down .logo {
 		margin-top: 6vh;
 		height: 6.65vh;
-		padding-left: 6.3vh;
+		padding-left: calc(6.3vh - 5%);
 		width: 100%;
 	}
 	.sea_bottom .title {
@@ -1174,7 +1194,7 @@ bottom: 0;
     	line-height: 18px;
 	}
 	.sea_bottom .catalog {
-		max-width: 100%;
+		width: 100%;
 	}
 	.sea_bottom .basket.active {
 		height: 21vh;
