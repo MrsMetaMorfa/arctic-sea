@@ -858,6 +858,10 @@ bottom: 0;
 	justify-content: flex-start!important;
 }
 
+.product-card .popup_back {
+	display: none;
+}
+
 
 @media screen and (max-width: 1360px) {
 	.content {
@@ -882,6 +886,23 @@ bottom: 0;
 	}
 	.product-card .product_content {
 	    padding: 16px 0;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.product-card .popup_inner {
+		position: relative;
+	}
+	.product-card .popup_back {
+		position: absolute;
+		z-index: 10;
+		width: 24px;
+		height: 24px;
+		padding: 4px;
+		right: 8px;
+		top: 8px;
+		margin: 0;
+		display: block;
 	}
 }
 
