@@ -1224,7 +1224,7 @@ bottom: 0;
 		padding: 0;
 	}
 	.product-card .popup_inner {
-		max-height: 100vh;
+		min-height: 100vh;
 		padding: 0;
 	}
 }
