@@ -6,7 +6,7 @@
 	<title>Arctic Sea</title>
 	<link rel="stylesheet" type="text/css" href="assets/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/fonts/stylesheet.css">
-	<link rel="stylesheet" type="text/css" href="assets/scripts/glider.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/scripts/tiny-slider.css">
 	<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@lugindev/truescrollbar/src/TrueScrollBar.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="assets/style.css">
 </head>
@@ -316,7 +316,7 @@
 		</div>
 	</div>
 
-	<script src="assets/scripts/glider.min.js"></script>
+	<script src="assets/scripts/tiny-slider.js"></script>
 	<!-- <script src="https://cdn.jsdelivr.net/npm/@lugindev/truescrollbar/src/TrueScrollBar.min.js"></script> -->
 	<!-- <script src="assets/scripts/script.js"></script> -->
 	<!-- Move following script to script.js -->
@@ -365,56 +365,36 @@
 				}, 900);
 			}
 
-			let glider = new Glider(document.querySelector('.glider'), {
-				//fixedWidth: '240px',
-				slidesToShow: 2,
-				slidesToScroll: 2,
-				draggable: true,
-				pagination: false,
-				responsive: [
-					{
-						breakpoint: 767,
-						settings: {
-				   			slidesToShow: 2,
-				   			slidesToScroll: 2
-						}
+			let slider = tns({
+				container: '.glider',
+				items: 2,
+				slideBy: 2,
+				autoplay: true,
+				autoplayTimeout: 5000,
+				autoplayButtonOutput: false,
+				responsive: {
+					767: {
+			   			items: 2,
+			   			slideBy: 2
 					},
-					{
-						breakpoint: 500,
-						settings: {
-				   			slidesToShow: 1,
-				   			slidesToScroll: 1
-						}
+					500: {
+			   			items: 1,
+			   			slideBy: 1
 					},
-					{
-						breakpoint: 320,
-						settings: {
-				   			slidesToShow: 2,
-				   			slidesToScroll: 2
-						}
+					320: {
+			   			items: 2,
+			   			slideBy: 2
 					}
-				],
-				arrows: {
-					prev: '.catalog_arrow--prev',
-					next: '.catalog_arrow--next'
-				}
+				},
+				nav: false,
+				prevButton: '.catalog_arrow--prev',
+				nextButton: '.catalog_arrow--next'
 			} );
 
 			let catalog = document.querySelector('.catalog');
-			let prevSlide = document.querySelector('.catalog_arrow--prev');
-			let nextSlide = document.querySelector('.catalog_arrow--next');
-			let autoslide = setInterval(() => {
-				nextSlide.classList.contains('disabled') ? glider.scrollItem(0) : nextSlide.click()
-			}, 5000);
-
-			catalog.onmouseenter = () => { 
-				clearInterval(autoslide);
-			 }
-			catalog.onmouseleave = () => {
-				autoslide = setInterval(() => {
-					nextSlide.classList.contains('disabled') ? glider.scrollItem(0) : nextSlide.click()
-				}, 5000)
-			}
+			catalog.onmouseenter = () => { slider.pause() };
+			catalog.onmouseleave = () => { slider.play() };
+			window.onresize = () => { slider.pause(); slider.refresh(); };
 
 			// Popups
 			let popups = document.querySelectorAll('.popup');
